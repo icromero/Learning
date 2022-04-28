@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="container__header">
+        <nav>
+            <a class="logo">
+              PokeDex-App
+          </a>
+            <ul>
+                <li><a [routerLink]="['/home']">Home </a></li>
+                <li><a [routerLink]="['/list']">List</a></li>
+                <li><a [routerLink]="['/about']">About</a></li>
+                <li>
+                    <button class="tertiary-btn" [routerLink]="['/creates']">My creates</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <router-outlet>
+    </router-outlet>
+    <div class="container__foot">
+        <footer>
+            <div class="foot-block">
+                <h3>Our service</h3>
+                <ul>
+                    <li><a [routerLink]="['/home']">Home </a></li>
+                    <li><a [routerLink]="['/list']">List</a></li>
+                    <li><a [routerLink]="['/about']">About</a></li>
+                </ul>
+            </div>
+            <div class="foot-block">
+                <h3>Contact</h3>
+                <ul>
+                    <li>+34 987 87 38</li>
+                    <li>@SuperHer0</li>
+                    <li><a href="mailto:superhero@supp.com">superhero@supp.com</a></li>
+                </ul>
+            </div>
+            <div class="foot-block">
+                <h3>Terms and policies</h3>
+                <ul>
+                    <li><a href="">Privacy and policy </a></li>
+                    <li><a href="">Mission and vision</a></li>
+                    <li><a href="">Cookies</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</div>

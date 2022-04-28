@@ -1,0 +1,57 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixin.scss';
+.container {
+    padding: 0 2rem 2rem;
+    .card {
+        background-color: $secondary-color;
+        .header {
+            border-radius: 5px;
+            padding: .5rem;
+            background-color: $text-color-inverse;
+            font-size: 20px;
+        }
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+        img {
+            width: 240px;
+            margin: 0 auto;
+        }
+        img:hover {
+            transform: scale(1.4);
+            transition: 1s;
+        }
+        .content {
+            background-color: $text-color-inverse;
+            border-radius: 5px;
+            p {
+                font-size: 18px;
+                color: $shadow-color;
+            }
+            .content__type {
+                width: 100%;
+                border: 2px solid $secondary-color;
+                @include flex-Box(space-between, center, nowrap);
+                padding: .5rem;
+            }
+            .content__ability {
+                width: 100%;
+                border: 2px solid $secondary-color;
+                @include flex-Box(space-between, center, nowrap);
+                padding: .5rem;
+            }
+            .content__stat {
+                @include flex-Box(space-around, space-evenly, wrap);
+                padding: .5rem;
+                width: 100%;
+                border: 2px solid $secondary-color;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.foot {
+    @include flex-Box(space-evenly, center, nowrap);
+    height: 100px;
+}

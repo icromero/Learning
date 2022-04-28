@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <ul class="list-creates">
+            <li (click)="openForEdit(employee)" class="list-creates__created --hover" [class.--active]="employee == selectedEmployee" *ngFor="let employee of employeeList">
+                <span class="number">{{employee.id}}</span>{{employee.name}}
+            </li>
+        </ul>
+        <div class="card">
+            <div class="card-body">
+                <div class="card-body__title">Insert New Character</div>
+                <div class="card-body__form">
+                    <label for="name">Name</label>
+                    <input [(ngModel)]="selectedEmployee.name" class="form-control" type="text" placeholder="Insert a Name" id="name">
+                    <label for="country">Country</label>
+                    <input [(ngModel)]="selectedEmployee.country" class="form-control" type="text" placeholder="Insert a Country" id="country">
+
+                </div>
+                <button (click)="addOrEdit()" class="secondary-btn">Add/Edit</button>
+                <button *ngIf="selectedEmployee.id!==0" (click)="delete()" class="secondary-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

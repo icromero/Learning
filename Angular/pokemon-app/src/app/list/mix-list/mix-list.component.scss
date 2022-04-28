@@ -1,0 +1,59 @@
+/*Import*/
+
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixin.scss';
+$primary-color-morty: #97ce4c;
+.search {
+    width: 100%;
+    color: white;
+    background-color: $primary-color-morty;
+    padding: 1rem;
+    font-size: 20px;
+    @include flex-Box(space-evenly, center, nowrap);
+    .search__wrap {
+        width: 600px;
+        min-width: 200px;
+        input {
+            width: 100%;
+            height: 100%;
+            padding: 10px 20px;
+            border-radius: 3px;
+            border: none;
+            font-size: 18px;
+            margin: 0;
+        }
+    }
+}
+
+section {
+    background-color: #3D373C;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 18rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+    padding: 1rem;
+    .card {
+        width: 100%;
+        height: 200px;
+        background-color: #E6E0DB;
+        box-shadow: 1px 2px 5px $text-color-inverse;
+        cursor: pointer;
+        img {
+            display: block;
+            max-width: 150px;
+            margin: 0 auto;
+        }
+        h3 {
+            background-color: $primary-color-morty;
+            color: $text-color-inverse;
+            text-align: center;
+            font-weight: 400;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        &:hover {
+            transform: scale(.9);
+            transition: 1s;
+        }
+    }
+}

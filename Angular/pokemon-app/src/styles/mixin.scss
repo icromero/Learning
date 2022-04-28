@@ -1,0 +1,7 @@
+//Use of Mixins
+@mixin flex-Box($primary, $cross, $wrap) {
+    display: flex;
+    justify-content: $primary;
+    align-items: $cross;
+    flex-wrap: $wrap;
+}

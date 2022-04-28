@@ -1,0 +1,10 @@
+/*Import*/
+
+@import '../../styles/variables.scss';
+@import '../../styles/mixin.scss';
+section {
+    padding: 2rem;
+    h2 {
+        text-align: center;
+    }
+}

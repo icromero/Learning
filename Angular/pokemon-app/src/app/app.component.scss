@@ -1,0 +1,59 @@
+/*Import*/
+
+@import '../styles/variables.scss';
+@import '../styles/mixin.scss';
+.container__header {
+    width: 100%;
+    nav {
+        @include flex-Box(space-between, center, nowrap);
+        background-color: $theme-color;
+        .logo {
+            padding: 1rem;
+            color: $text-color-inverse;
+            font-weight: 700;
+            font-size: 30px;
+        }
+        ul {
+            @include flex-Box(space-between, center, nowrap);
+            li {
+                padding: 1rem;
+            }
+            a {
+                color: $text-color-inverse;
+                font-weight: 500;
+                font-size: 20px;
+            }
+            a:hover {
+                color: $text-color;
+                font-size: medium;
+                transition: .8s;
+            }
+        }
+    }
+}
+
+.container__foot {
+    width: 100%;
+    footer {
+        background-color: $text-color;
+        @include flex-Box(space-evenly, center, nowrap);
+        .foot-block {
+            color: $text-color-inverse;
+            padding: 1rem 2rem;
+            ul {
+                padding: 0;
+            }
+        }
+        a {
+            color: $text-color-inverse;
+            &:hover {
+                text-decoration: underline;
+                font-weight: 700;
+            }
+        }
+        h3 {
+            color: $text-color-inverse;
+            font-weight: 400;
+        }
+    }
+}

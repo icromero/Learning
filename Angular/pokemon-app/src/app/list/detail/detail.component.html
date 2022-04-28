@@ -1,0 +1,38 @@
+<div class="container">
+    <mat-card class="card">
+        <mat-card-header class="header">
+            <div mat-card-avatar class="id">{{pokemonsDetail.id}}</div>
+            <mat-card-title>{{pokemonsDetail.name|uppercase}}</mat-card-title>
+            <mat-card-subtitle>Weight: {{pokemonsDetail.weight}}</mat-card-subtitle>
+            <mat-card-subtitle>Height: {{pokemonsDetail.height}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="pokemonsDetail.sprites.front_default" alt="Pokemon image information">
+
+        <mat-card-content class="content">
+
+            <div class="content__type">
+                <p>Type:</p>
+                <div *ngFor="let type of pokemonsDetail.types">
+                    <p>{{type.type.name| uppercase}}</p>
+                </div>
+            </div>
+            <div class="content__ability">
+                <p>Abilities:</p>
+                <div *ngFor="let ability of pokemonsDetail.abilities">
+                    <p>{{ability.ability.name |uppercase}}</p>
+                </div>
+
+            </div>
+            <div class="content__stat">
+                <p>Stats:</p>
+                <div *ngFor="let stat of pokemonsDetail.stats">
+                    {{stat.stat.name}}: {{stat.base_stat}}
+                </div>
+            </div>
+        </mat-card-content>
+        <!-- <mat-card-actions class="foot">
+            <button mat-button class="primary-btn">EDIT</button>
+            <button mat-button class="primary-btn">DELETE</button>
+        </mat-card-actions> -->
+    </mat-card>
+</div>

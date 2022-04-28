@@ -1,0 +1,20 @@
+<div class="search">
+    <div class="search__wrap">
+        <input type="text" [(ngModel)]="filter" id="search" placeholder="Search..." />
+    </div>
+    <div class="mix">
+        <button [routerLink]="['/list/mix']" class="secondary-btn">Another List</button>
+    </div>
+</div>
+<mat-paginator [length]="pokemonList.length" [pageSize]="pageSize" (page)="handlePage($event)" aria-label="Select page">
+</mat-paginator>
+<section>
+    <ng-container *ngIf="pokemonList.length === 180">
+        <div class="card" *ngFor="let pokemon of (pokemonList| filterNames: filter| filterPage: pageSize: pageNumber)" (click)="getDetails(pokemon)">
+            <a [routerLink]="['/list/'+pokemon.id]">
+                <img [src]="pokemon.image" alt="Pokemon image information">
+                <h3>{{pokemon.name}}</h3>
+            </a>
+        </div>
+    </ng-container>
+</section>

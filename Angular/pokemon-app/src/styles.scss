@@ -1,0 +1,208 @@
+/*
+ * pokemon_app 0.1
+ * Web Developments 
+ * Author: Ivan C Romero
+ * Since: 20/04/2022
+ */
+
+
+/*Defines global variables, and rules
+ *to main colors we'll use on the project*/
+
+
+/*Import*/
+
+@import './styles/variables.scss';
+@import './styles/mixin.scss';
+
+/*Functions*/
+
+@function size($value) {
+    @return $value * $unit;
+}
+
+
+/*Fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Main settings*/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: white;
+    color: $text-color;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        h1 {
+            font-size: size(4);
+        }
+        h2 {
+            font-size: size(3);
+        }
+        p {
+            font-size: size(2.5);
+        }
+    }
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media (min-width: 768px) {
+        p {
+            font-size: size(1.5);
+        }
+    }
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+        p {
+            font-size: size(2);
+        }
+    }
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        p {
+            font-size: size(2.5);
+        }
+    }
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        p {
+            font-size: size(3);
+        }
+    }
+    @media (min-width: 1200px) {
+        p {
+            font-size: size(2.2);
+        }
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    width: 80%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.container__header,
+.container__body {
+    margin-bottom: 2rem;
+}
+
+p {
+    color: $text-color;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $secondary-color;
+    margin: 0;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: size(6);
+}
+
+h2 {
+    font-weight: bold;
+    font-size: size(4);
+}
+
+h3 {
+    font-weight: lighter;
+    font-size: size(3);
+}
+
+.btn {
+    border: none;
+    border-radius: 16px;
+    padding: 0.5em;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    @extend .btn;
+    color: $text-color-inverse;
+    background-color: $primary-color;
+    &:hover {
+        background-color: $theme-color;
+        color: $text-color-inverse;
+        border: 2px solid $primary-color;
+    }
+}
+
+.secondary-btn {
+    @extend .btn;
+    color: $text-color-inverse;
+    background-color: $primary-color;
+    border: 2px solid $text-color-inverse;
+    &:hover {
+        background-color: $theme-color;
+        color: $primary-color;
+    }
+}
+
+.tertiary-btn {
+    @extend .btn;
+    color: $text-color-inverse;
+    background-color: $theme-color;
+    border: 2px solid $text-color-inverse;
+    &:hover {
+        background-color: $text-color-inverse;
+        color: $theme-color;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
